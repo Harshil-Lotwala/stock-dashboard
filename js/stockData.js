@@ -1,0 +1,237 @@
+// Stock Data Configuration
+// This file contains predefined stock lists and market data
+
+const STOCK_DATA = {
+  // Dow Jones Industrial Average (30 stocks)
+  dow30: [
+    { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+    { symbol: "MSFT", name: "Microsoft Corporation", exchange: "NASDAQ" },
+    { symbol: "UNH", name: "UnitedHealth Group Inc.", exchange: "NYSE" },
+    { symbol: "JNJ", name: "Johnson & Johnson", exchange: "NYSE" },
+    { symbol: "JPM", name: "JPMorgan Chase & Co.", exchange: "NYSE" },
+    { symbol: "V", name: "Visa Inc.", exchange: "NYSE" },
+    { symbol: "PG", name: "Procter & Gamble Co.", exchange: "NYSE" },
+    { symbol: "HD", name: "Home Depot Inc.", exchange: "NYSE" },
+    { symbol: "CVX", name: "Chevron Corporation", exchange: "NYSE" },
+    { symbol: "MRK", name: "Merck & Co. Inc.", exchange: "NYSE" },
+    { symbol: "BAC", name: "Bank of America Corp.", exchange: "NYSE" },
+    { symbol: "ABBV", name: "AbbVie Inc.", exchange: "NYSE" },
+    { symbol: "KO", name: "Coca-Cola Co.", exchange: "NYSE" },
+    { symbol: "PEP", name: "PepsiCo Inc.", exchange: "NASDAQ" },
+    { symbol: "COST", name: "Costco Wholesale Corp.", exchange: "NASDAQ" },
+    { symbol: "AVGO", name: "Broadcom Inc.", exchange: "NASDAQ" },
+    { symbol: "XOM", name: "Exxon Mobil Corporation", exchange: "NYSE" },
+    { symbol: "LLY", name: "Eli Lilly and Co.", exchange: "NYSE" },
+    { symbol: "WMT", name: "Walmart Inc.", exchange: "NYSE" },
+    { symbol: "TMO", name: "Thermo Fisher Scientific Inc.", exchange: "NYSE" },
+    { symbol: "ACN", name: "Accenture plc", exchange: "NYSE" },
+    { symbol: "ABT", name: "Abbott Laboratories", exchange: "NYSE" },
+    { symbol: "CSCO", name: "Cisco Systems Inc.", exchange: "NASDAQ" },
+    { symbol: "DIS", name: "Walt Disney Co.", exchange: "NYSE" },
+    { symbol: "WFC", name: "Wells Fargo & Co.", exchange: "NYSE" },
+    { symbol: "NKE", name: "Nike Inc.", exchange: "NYSE" },
+    { symbol: "TXN", name: "Texas Instruments Inc.", exchange: "NASDAQ" },
+    { symbol: "VZ", name: "Verizon Communications Inc.", exchange: "NYSE" },
+    { symbol: "PM", name: "Philip Morris International Inc.", exchange: "NYSE" },
+    { symbol: "NEE", name: "NextEra Energy Inc.", exchange: "NYSE" }
+  ],
+
+  // S&P 500 Top 50 by market cap
+  sp500: [
+    { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+    { symbol: "MSFT", name: "Microsoft Corporation", exchange: "NASDAQ" },
+    { symbol: "GOOGL", name: "Alphabet Inc. Class A", exchange: "NASDAQ" },
+    { symbol: "AMZN", name: "Amazon.com Inc.", exchange: "NASDAQ" },
+    { symbol: "NVDA", name: "NVIDIA Corporation", exchange: "NASDAQ" },
+    { symbol: "TSLA", name: "Tesla Inc.", exchange: "NASDAQ" },
+    { symbol: "META", name: "Meta Platforms Inc.", exchange: "NASDAQ" },
+    { symbol: "BRK.B", name: "Berkshire Hathaway Inc. Class B", exchange: "NYSE" },
+    { symbol: "UNH", name: "UnitedHealth Group Inc.", exchange: "NYSE" },
+    { symbol: "JNJ", name: "Johnson & Johnson", exchange: "NYSE" },
+    { symbol: "JPM", name: "JPMorgan Chase & Co.", exchange: "NYSE" },
+    { symbol: "V", name: "Visa Inc.", exchange: "NYSE" },
+    { symbol: "PG", name: "Procter & Gamble Co.", exchange: "NYSE" },
+    { symbol: "HD", name: "Home Depot Inc.", exchange: "NYSE" },
+    { symbol: "MA", name: "Mastercard Inc.", exchange: "NYSE" },
+    { symbol: "CVX", name: "Chevron Corporation", exchange: "NYSE" },
+    { symbol: "ABBV", name: "AbbVie Inc.", exchange: "NYSE" },
+    { symbol: "BAC", name: "Bank of America Corp.", exchange: "NYSE" },
+    { symbol: "LLY", name: "Eli Lilly and Co.", exchange: "NYSE" },
+    { symbol: "KO", name: "Coca-Cola Co.", exchange: "NYSE" },
+    { symbol: "AVGO", name: "Broadcom Inc.", exchange: "NASDAQ" },
+    { symbol: "MRK", name: "Merck & Co. Inc.", exchange: "NYSE" },
+    { symbol: "PEP", name: "PepsiCo Inc.", exchange: "NASDAQ" },
+    { symbol: "COST", name: "Costco Wholesale Corp.", exchange: "NASDAQ" },
+    { symbol: "XOM", name: "Exxon Mobil Corporation", exchange: "NYSE" },
+    { symbol: "ADBE", name: "Adobe Inc.", exchange: "NASDAQ" },
+    { symbol: "WMT", name: "Walmart Inc.", exchange: "NYSE" },
+    { symbol: "TMO", name: "Thermo Fisher Scientific Inc.", exchange: "NYSE" },
+    { symbol: "CRM", name: "Salesforce Inc.", exchange: "NYSE" },
+    { symbol: "ACN", name: "Accenture plc", exchange: "NYSE" },
+    { symbol: "ABT", name: "Abbott Laboratories", exchange: "NYSE" },
+    { symbol: "NFLX", name: "Netflix Inc.", exchange: "NASDAQ" },
+    { symbol: "CSCO", name: "Cisco Systems Inc.", exchange: "NASDAQ" },
+    { symbol: "ORCL", name: "Oracle Corporation", exchange: "NYSE" },
+    { symbol: "DIS", name: "Walt Disney Co.", exchange: "NYSE" },
+    { symbol: "INTC", name: "Intel Corporation", exchange: "NASDAQ" },
+    { symbol: "WFC", name: "Wells Fargo & Co.", exchange: "NYSE" },
+    { symbol: "CMCSA", name: "Comcast Corporation", exchange: "NASDAQ" },
+    { symbol: "NKE", name: "Nike Inc.", exchange: "NYSE" },
+    { symbol: "TXN", name: "Texas Instruments Inc.", exchange: "NASDAQ" },
+    { symbol: "VZ", name: "Verizon Communications Inc.", exchange: "NYSE" },
+    { symbol: "DHR", name: "Danaher Corporation", exchange: "NYSE" },
+    { symbol: "PM", name: "Philip Morris International Inc.", exchange: "NYSE" },
+    { symbol: "AMGN", name: "Amgen Inc.", exchange: "NASDAQ" },
+    { symbol: "NEE", name: "NextEra Energy Inc.", exchange: "NYSE" },
+    { symbol: "RTX", name: "Raytheon Technologies Corp.", exchange: "NYSE" },
+    { symbol: "UPS", name: "United Parcel Service Inc.", exchange: "NYSE" },
+    { symbol: "LOW", name: "Lowe's Companies Inc.", exchange: "NYSE" },
+    { symbol: "QCOM", name: "QUALCOMM Inc.", exchange: "NASDAQ" },
+    { symbol: "HON", name: "Honeywell International Inc.", exchange: "NASDAQ" }
+  ],
+
+  // NASDAQ 100 Top 30
+  nasdaq100: [
+    { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+    { symbol: "MSFT", name: "Microsoft Corporation", exchange: "NASDAQ" },
+    { symbol: "GOOGL", name: "Alphabet Inc. Class A", exchange: "NASDAQ" },
+    { symbol: "AMZN", name: "Amazon.com Inc.", exchange: "NASDAQ" },
+    { symbol: "NVDA", name: "NVIDIA Corporation", exchange: "NASDAQ" },
+    { symbol: "TSLA", name: "Tesla Inc.", exchange: "NASDAQ" },
+    { symbol: "META", name: "Meta Platforms Inc.", exchange: "NASDAQ" },
+    { symbol: "AVGO", name: "Broadcom Inc.", exchange: "NASDAQ" },
+    { symbol: "PEP", name: "PepsiCo Inc.", exchange: "NASDAQ" },
+    { symbol: "COST", name: "Costco Wholesale Corp.", exchange: "NASDAQ" },
+    { symbol: "ADBE", name: "Adobe Inc.", exchange: "NASDAQ" },
+    { symbol: "NFLX", name: "Netflix Inc.", exchange: "NASDAQ" },
+    { symbol: "CSCO", name: "Cisco Systems Inc.", exchange: "NASDAQ" },
+    { symbol: "INTC", name: "Intel Corporation", exchange: "NASDAQ" },
+    { symbol: "CMCSA", name: "Comcast Corporation", exchange: "NASDAQ" },
+    { symbol: "TXN", name: "Texas Instruments Inc.", exchange: "NASDAQ" },
+    { symbol: "AMGN", name: "Amgen Inc.", exchange: "NASDAQ" },
+    { symbol: "QCOM", name: "QUALCOMM Inc.", exchange: "NASDAQ" },
+    { symbol: "HON", name: "Honeywell International Inc.", exchange: "NASDAQ" },
+    { symbol: "SBUX", name: "Starbucks Corporation", exchange: "NASDAQ" },
+    { symbol: "GILD", name: "Gilead Sciences Inc.", exchange: "NASDAQ" },
+    { symbol: "INTU", name: "Intuit Inc.", exchange: "NASDAQ" },
+    { symbol: "AMD", name: "Advanced Micro Devices Inc.", exchange: "NASDAQ" },
+    { symbol: "BKNG", name: "Booking Holdings Inc.", exchange: "NASDAQ" },
+    { symbol: "ADP", name: "Automatic Data Processing Inc.", exchange: "NASDAQ" },
+    { symbol: "MDLZ", name: "Mondelez International Inc.", exchange: "NASDAQ" },
+    { symbol: "ISRG", name: "Intuitive Surgical Inc.", exchange: "NASDAQ" },
+    { symbol: "VRTX", name: "Vertex Pharmaceuticals Inc.", exchange: "NASDAQ" },
+    { symbol: "MU", name: "Micron Technology Inc.", exchange: "NASDAQ" },
+    { symbol: "PYPL", name: "PayPal Holdings Inc.", exchange: "NASDAQ" }
+  ],
+
+  // Trending/Popular stocks
+  trending: [
+    { symbol: "TSLA", name: "Tesla Inc.", exchange: "NASDAQ" },
+    { symbol: "GME", name: "GameStop Corp.", exchange: "NYSE" },
+    { symbol: "AMC", name: "AMC Entertainment Holdings Inc.", exchange: "NYSE" },
+    { symbol: "NVDA", name: "NVIDIA Corporation", exchange: "NASDAQ" },
+    { symbol: "PLTR", name: "Palantir Technologies Inc.", exchange: "NYSE" },
+    { symbol: "RIVN", name: "Rivian Automotive Inc.", exchange: "NASDAQ" },
+    { symbol: "LCID", name: "Lucid Group Inc.", exchange: "NASDAQ" },
+    { symbol: "COIN", name: "Coinbase Global Inc.", exchange: "NASDAQ" },
+    { symbol: "RBLX", name: "Roblox Corporation", exchange: "NYSE" },
+    { symbol: "HOOD", name: "Robinhood Markets Inc.", exchange: "NASDAQ" },
+    { symbol: "SOFI", name: "SoFi Technologies Inc.", exchange: "NASDAQ" },
+    { symbol: "WISH", name: "ContextLogic Inc.", exchange: "NASDAQ" },
+    { symbol: "BB", name: "BlackBerry Limited", exchange: "NYSE" },
+    { symbol: "NOK", name: "Nokia Corporation", exchange: "NYSE" },
+    { symbol: "CLOV", name: "Clover Health Investments Corp.", exchange: "NASDAQ" },
+    { symbol: "SPCE", name: "Virgin Galactic Holdings Inc.", exchange: "NYSE" },
+    { symbol: "UWMC", name: "UWM Holdings Corporation", exchange: "NYSE" },
+    { symbol: "PROG", name: "Progenity Inc.", exchange: "NASDAQ" },
+    { symbol: "SNDL", name: "Sundial Growers Inc.", exchange: "NASDAQ" },
+    { symbol: "OCGN", name: "Ocugen Inc.", exchange: "NASDAQ" }
+  ],
+
+  // Blockchain & Crypto Companies
+  blockchain: [
+    { symbol: "COIN", name: "Coinbase Global Inc.", exchange: "NASDAQ" },
+    { symbol: "MSTR", name: "MicroStrategy Inc.", exchange: "NASDAQ" },
+    { symbol: "RIOT", name: "Riot Platforms Inc.", exchange: "NASDAQ" },
+    { symbol: "MARA", name: "Marathon Digital Holdings Inc.", exchange: "NASDAQ" },
+    { symbol: "CLSK", name: "CleanSpark Inc.", exchange: "NASDAQ" },
+    { symbol: "BITF", name: "Bitfarms Ltd.", exchange: "NASDAQ" },
+    { symbol: "HUT", name: "Hut 8 Mining Corp.", exchange: "NASDAQ" },
+    { symbol: "BTBT", name: "Bit Digital Inc.", exchange: "NASDAQ" },
+    { symbol: "CAN", name: "Canaan Inc.", exchange: "NASDAQ" },
+    { symbol: "EBANG", name: "Ebang International Holdings Inc.", exchange: "NASDAQ" },
+    { symbol: "SQ", name: "Block Inc.", exchange: "NYSE" },
+    { symbol: "PYPL", name: "PayPal Holdings Inc.", exchange: "NASDAQ" },
+    { symbol: "HOOD", name: "Robinhood Markets Inc.", exchange: "NASDAQ" },
+    { symbol: "SOFI", name: "SoFi Technologies Inc.", exchange: "NASDAQ" }
+  ],
+
+
+  // AI and Technology stocks
+  ai: [
+    { symbol: "NVDA", name: "NVIDIA Corporation", exchange: "NASDAQ" },
+    { symbol: "GOOGL", name: "Alphabet Inc. Class A", exchange: "NASDAQ" },
+    { symbol: "MSFT", name: "Microsoft Corporation", exchange: "NASDAQ" },
+    { symbol: "TSLA", name: "Tesla Inc.", exchange: "NASDAQ" },
+    { symbol: "META", name: "Meta Platforms Inc.", exchange: "NASDAQ" },
+    { symbol: "AMZN", name: "Amazon.com Inc.", exchange: "NASDAQ" },
+    { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+    { symbol: "PLTR", name: "Palantir Technologies Inc.", exchange: "NYSE" },
+    { symbol: "CRM", name: "Salesforce Inc.", exchange: "NYSE" },
+    { symbol: "SNOW", name: "Snowflake Inc.", exchange: "NYSE" },
+    { symbol: "ADBE", name: "Adobe Inc.", exchange: "NASDAQ" },
+    { symbol: "NOW", name: "ServiceNow Inc.", exchange: "NYSE" },
+    { symbol: "INTC", name: "Intel Corporation", exchange: "NASDAQ" },
+    { symbol: "AMD", name: "Advanced Micro Devices Inc.", exchange: "NASDAQ" },
+    { symbol: "ORCL", name: "Oracle Corporation", exchange: "NYSE" },
+    { symbol: "IBM", name: "International Business Machines Corp.", exchange: "NYSE" },
+    { symbol: "NFLX", name: "Netflix Inc.", exchange: "NASDAQ" },
+    { symbol: "UBER", name: "Uber Technologies Inc.", exchange: "NYSE" },
+    { symbol: "LYFT", name: "Lyft Inc.", exchange: "NASDAQ" },
+    { symbol: "RBLX", name: "Roblox Corporation", exchange: "NYSE" }
+  ],
+
+  // Toronto Stock Exchange (TSX) - Top Canadian Stocks
+  tsx: [
+    { symbol: "SHOP", name: "Shopify Inc.", exchange: "TSX" },
+    { symbol: "RY", name: "Royal Bank of Canada", exchange: "TSX" },
+    { symbol: "TD", name: "Toronto-Dominion Bank", exchange: "TSX" },
+    { symbol: "BNS", name: "Bank of Nova Scotia", exchange: "TSX" },
+    { symbol: "BMO", name: "Bank of Montreal", exchange: "TSX" },
+    { symbol: "CNR", name: "Canadian National Railway Co.", exchange: "TSX" },
+    { symbol: "CP", name: "Canadian Pacific Railway Ltd.", exchange: "TSX" },
+    { symbol: "ENB", name: "Enbridge Inc.", exchange: "TSX" },
+    { symbol: "CNQ", name: "Canadian Natural Resources Ltd.", exchange: "TSX" },
+    { symbol: "SU", name: "Suncor Energy Inc.", exchange: "TSX" },
+    { symbol: "BCE", name: "BCE Inc.", exchange: "TSX" },
+    { symbol: "T", name: "TELUS Corporation", exchange: "TSX" },
+    { symbol: "RCI.B", name: "Rogers Communications Inc.", exchange: "TSX" },
+    { symbol: "ABX", name: "Barrick Gold Corporation", exchange: "TSX" },
+    { symbol: "NEM", name: "Newmont Corporation", exchange: "TSX" },
+    { symbol: "CCL.B", name: "CCL Industries Inc.", exchange: "TSX" },
+    { symbol: "WCN", name: "Waste Connections Inc.", exchange: "TSX" },
+    { symbol: "CSU", name: "Constellation Software Inc.", exchange: "TSX" },
+    { symbol: "MG", name: "Magna International Inc.", exchange: "TSX" },
+    { symbol: "QSR", name: "Restaurant Brands International Inc.", exchange: "TSX" }
+  ]
+};
+
+// Default watchlist (popular stocks)
+const DEFAULT_WATCHLIST = [
+  { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+  { symbol: "MSFT", name: "Microsoft Corporation", exchange: "NASDAQ" },
+  { symbol: "GOOGL", name: "Alphabet Inc. Class A", exchange: "NASDAQ" },
+  { symbol: "AMZN", name: "Amazon.com Inc.", exchange: "NASDAQ" },
+  { symbol: "TSLA", name: "Tesla Inc.", exchange: "NASDAQ" },
+  { symbol: "META", name: "Meta Platforms Inc.", exchange: "NASDAQ" },
+  { symbol: "NVDA", name: "NVIDIA Corporation", exchange: "NASDAQ" },
+  { symbol: "NFLX", name: "Netflix Inc.", exchange: "NASDAQ" }
+];
+
+// Export for use in other scripts
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { STOCK_DATA, DEFAULT_WATCHLIST };
+} else {
+  window.STOCK_DATA = STOCK_DATA;
+  window.DEFAULT_WATCHLIST = DEFAULT_WATCHLIST;
+}
