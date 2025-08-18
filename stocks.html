@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Live stock dashboard with real-time chart and ticker data." />
+  <meta name="author" content="Harshil" />
+  <title>Live Stocks Dashboard - Real-Time Stock Market Analysis</title>
+  <meta name="keywords" content="stock market, real-time stocks, stock analysis, trading dashboard, stock charts, financial data">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/stockData.js"></script>
+  <script defer src="js/script.js"></script>
+  
+  <!-- Google AdSense (Replace with your AdSense code) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  
+  <!-- Google Analytics (Replace with your tracking ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <nav class="navbar fade">
+    <div class="nav-left">
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+      <a href="will-apple-stock-go-up.html" class="stocks-link">Analysis</a>
+      <a href="stocks.html" class="stocks-link">Dashboard</a>
+    </div>
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="themeSwitch" />
+        <span>🌞</span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Functional Sidebar Menu -->
+  <div class="sidebar-menu" id="sidebarMenu">
+    <div class="menu-header">
+      <h3>📊 Stock Dashboard</h3>
+      <button class="menu-close" id="menuClose">×</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4>🌍 Global Markets</h4>
+      <button class="menu-item" data-action="market" data-value="US">🇺🇸 US Markets</button>
+      <button class="menu-item" data-action="market" data-value="CA">🇨🇦 Canadian Markets</button>
+      <button class="menu-item" data-action="market" data-value="EU">🇪🇺 European Markets</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4>⚡ Quick Actions</h4>
+      <button class="menu-item" data-action="randomStock">🎲 Random Stock</button>
+      <button class="menu-item" data-action="topMovers">📈 Top Movers</button>
+      <button class="menu-item" data-action="resetWatchlist">🔄 Reset Default</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4>📱 Tools</h4>
+      <button class="menu-item" data-action="fullscreen">🖥️ Fullscreen</button>
+      <button class="menu-item" data-action="share">📤 Share Watchlist</button>
+      <button class="menu-item" data-action="feedback">💬 Feedback</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4>ℹ️ Info</h4>
+      <button class="menu-item" data-action="shortcuts">⌨️ Shortcuts</button>
+      <button class="menu-item" data-action="about">📖 About</button>
+    </div>
+  </div>
+  
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Main Dashboard Layout -->
+  <div class="dashboard fade">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="watchlist-header">
+        <h2 class="fade">📊 My Watchlist</h2>
+        <button id="addToWatchlistBtn" class="add-btn fade" title="Add current stock to watchlist">+</button>
+      </div>
+      
+      <div class="search-section">
+        <input class="search fade" id="stockSearch" type="text" placeholder="Search any US stock (e.g., AAPL, TSLA)..." />
+        <div id="searchSuggestions" class="search-suggestions"></div>
+        <p id="searchError" class="fade" style="color: red; margin-top: 6px;"></p>
+      </div>
+      
+      <div class="stock-categories fade">
+        <h3>📈 Market Categories</h3>
+        <button class="category-btn" data-category="dow30">Dow 30</button>
+        <button class="category-btn" data-category="sp500">S&P 500</button>
+        <button class="category-btn" data-category="nasdaq100">NASDAQ 100</button>
+        <button class="category-btn" data-category="tsx">🇨🇦 TSX</button>
+        <button class="category-btn" data-category="trending">🔥 Trending</button>
+        <button class="category-btn" data-category="ai">🤖 AI/Tech</button>
+      </div>
+      
+      
+      <!-- Ad Space 1 - Banner Ad -->
+      <div class="ad-banner fade">
+        <div class="ad-label">Sponsored</div>
+        <!-- Google AdSense Banner (Replace with your ad code) -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+      <div class="market-stats fade">
+        <h3>📊 Market Overview</h3>
+        <div id="marketIndicators" class="market-indicators">
+          <div class="indicator" id="spyIndicator">
+            <span class="indicator-name">S&P 500</span>
+            <span class="indicator-value">Loading...</span>
+          </div>
+          <div class="indicator" id="vixIndicator">
+            <span class="indicator-name">VIX</span>
+            <span class="indicator-value">Loading...</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Trading Tools Affiliate Section -->
+      <div class="affiliate-section fade">
+        <h3>🔥 Trading Tools</h3>
+        <div class="affiliate-links">
+          <a href="https://www.tradingview.com/?aff_id=YOUR_ID" target="_blank" class="affiliate-btn">
+            📈 TradingView Pro
+          </a>
+          <a href="https://robinhood.com/us/en/support/articles/360001226846/referral-program/" target="_blank" class="affiliate-btn">
+            💰 Get Free Stock
+          </a>
+          <a href="https://www.webull.com/activity" target="_blank" class="affiliate-btn">
+            🎁 Webull Bonus
+          </a>
+        </div>
+      </div>
+      
+      <ul class="stock-list fade" id="watchlist">
+        <!-- Dynamic watchlist will be populated here -->
+      </ul>
+      
+      <div class="watchlist-actions fade">
+        <button id="clearWatchlist" class="clear-btn">Clear All</button>
+        <button id="exportWatchlist" class="export-btn">Export</button>
+      </div>
+    </aside>
+
+    <!-- Main Chart Area -->
+    <main class="main-content fade">
+      <div id="stock-title">AAPL - Apple Inc.</div>
+      <div id="chart-container">
+        <!-- TradingView chart will be injected by script.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Bottom Horizontal Ticker -->
+  <div class="horizontal-ticker fade">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+        "symbols": [],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>
