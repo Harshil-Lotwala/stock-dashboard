@@ -331,6 +331,22 @@ body.light footer {
   width: 100%;
 }
 
+.chart-info-message {
+  background-color: #4db8ff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.chart-info-message.fade-out {
+  opacity: 0;
+}
+
 /* Light Theme Overrides */
 body.light .sidebar {
   background-color: #f4f4f4;
