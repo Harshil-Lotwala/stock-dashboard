@@ -107,14 +107,14 @@ cd /Users/harshil/Desktop/apple-stock-site
 zip -r stock-dashboard.zip . -x "*.DS_Store" "README.md"
 ```
 
-### For GitHub:
+### For GitLab:
 ```bash
 # Initialize git repository
 git init
 git add .
 git commit -m "Initial stock dashboard"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/stock-dashboard.git
+git remote add origin https://git.cs.dal.ca/lotwala/stock-dashboard.git
 git push -u origin main
 ```
 
