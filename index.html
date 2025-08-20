@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional stock market dashboard with real-time charts, analysis tools, and market tracking for investors and traders.">
+  <meta name="keywords" content="stock market, real-time stocks, stock dashboard, trading, financial analysis, stock charts, market tracker">
+  <title>Stock Market Dashboard - Real-Time Trading & Analysis Tools</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #4db8ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(77, 184, 255, 0.6);
+      background: #3da8e8;
+    }
+    .features {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .feature {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .features {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Market Dashboard</h1>
+    <p>Professional real-time stock tracking and analysis platform</p>
+    <a href="stocks.html" class="btn">Launch Dashboard</a>
+    
+    <div class="features">
+      <div class="feature">Real-time Charts</div>
+      <div class="feature">Stock Search</div>
+      <div class="feature">Mobile Ready</div>
+      <div class="feature">Dark/Light Theme</div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = 'stocks.html';
+    }, 5000);
+
+    gtag('event', 'page_view', {
+      page_title: 'Stock Dashboard Homepage',
+      page_location: window.location.href
+    });
+  </script>
+</body>
+</html>
