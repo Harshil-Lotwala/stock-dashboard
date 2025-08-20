@@ -64,7 +64,6 @@ Created by Harshil Lotwala
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Harshil-Lotwala/stock-dashboard.git
-   cd stock-dashboard
    ```
 
 2. **Open in browser:**
@@ -114,20 +113,20 @@ Created by Harshil Lotwala
 
 ```
 stock-dashboard/
-├── index.html              # Landing page
-├── stocks.html             # Main dashboard
-├── will-apple-stock-go-up.html # Apple analysis
-├── test-search.html        # Search functionality test
+├── index.html              
+├── stocks.html             
+├── will-apple-stock-go-up.html 
+├── test-search.html        
 ├── css/
-│   └── style.css          # Main stylesheet with modern design
+│   └── style.css          
 ├── js/
-│   ├── script.js          # Core application logic
-│   ├── stockData.js       # Stock data and categories
-│   ├── configure.js       # API configuration
-│   └── dynamicStockData.js # Dynamic data management
-├── README.md              # Project documentation
-├── API_SETUP_GUIDE.md     # API setup instructions
-└── vercel.json           # Deployment configuration
+│   ├── script.js          
+│   ├── stockData.js       
+│   ├── configure.js       
+│   └── dynamicStockData.js 
+├── README.md              
+├── API_SETUP_GUIDE.md     
+└── vercel.json           
 ```
 
 
