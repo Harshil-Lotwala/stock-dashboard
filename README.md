@@ -4,7 +4,6 @@ A modern, responsive stock market dashboard featuring real-time stock data, inte
 
 Created by Harshil Lotwala
 
-![Stock Dashboard Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue) ![Version](https://img.shields.io/badge/Version-2.0-orange)
 
 ##  Features
 
@@ -113,7 +112,7 @@ Created by Harshil Lotwala
 
 ## File Structure
 
-
+```
 stock-dashboard/
 ├── index.html              # Landing page
 ├── stocks.html             # Main dashboard
@@ -129,7 +128,7 @@ stock-dashboard/
 ├── README.md              # Project documentation
 ├── API_SETUP_GUIDE.md     # API setup instructions
 └── vercel.json           # Deployment configuration
-
+```
 
 
 
