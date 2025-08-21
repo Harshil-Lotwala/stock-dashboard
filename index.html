@@ -1,106 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional stock market dashboard with real-time charts, analysis tools, and market tracking for investors and traders.">
-  <meta name="keywords" content="stock market, real-time stocks, stock dashboard, trading, financial analysis, stock charts, market tracker">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional stock market dashboard with real-time charts, analysis tools, and market tracking for investors and traders." />
+  <meta name="author" content="Harshil" />
   <title>Stock Market Dashboard - Real-Time Trading & Analysis Tools</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-    }
-    .container {
-      text-align: center;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      background: #4db8ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4);
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(77, 184, 255, 0.6);
-      background: #3da8e8;
-    }
-    .features {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .feature {
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
-    @media (max-width: 768px) {
-      .container {
-        margin: 20px;
-        padding: 30px;
-      }
-      h1 {
-        font-size: 2em;
-      }
-      .features {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+  <meta name="keywords" content="stock market, real-time stocks, stock dashboard, trading, financial analysis, stock charts, market tracker">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/stockData.js"></script>
+  <script defer src="js/script.js"></script>
+  
+  <!-- Replace XXXXXXXXXX with your Google AdSense Publisher ID -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9794693446234832" crossorigin="anonymous"></script>
+  
+  <!-- Replace GA_TRACKING_ID with your Google Analytics 4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID'); 
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Stock Market Dashboard</h1>
-    <p>Professional real-time stock tracking and analysis platform</p>
-    <a href="stocks.html" class="btn">Launch Dashboard</a>
-    
-    <div class="features">
-      <div class="feature">Real-time Charts</div>
-      <div class="feature">Stock Search</div>
-      <div class="feature">Mobile Ready</div>
-      <div class="feature">Dark/Light Theme</div>
+
+  <nav class="navbar fade">
+    <div class="nav-left">
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+      <a href="will-apple-stock-go-up.html" class="stocks-link">Analysis</a>
+      <a href="stocks.html" class="stocks-link">Dashboard</a>
     </div>
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="themeSwitch" />
+        <span>🌞</span>
+      </label>
+    </div>
+  </nav>
+
+  <div class="sidebar-menu" id="sidebarMenu">
+    <div class="menu-header">
+      <h3>Stock Dashboard</h3>
+      <button class="menu-close" id="menuClose">×</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4> Global Markets</h4>
+      <button class="menu-item" data-action="market" data-value="US"> US Markets</button>
+      <button class="menu-item" data-action="market" data-value="CA">Canadian Markets</button>
+      <button class="menu-item" data-action="market" data-value="EU"> European Markets</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4> Quick Actions</h4>
+      <button class="menu-item" data-action="randomStock">Random Stock</button>
+      <button class="menu-item" data-action="topMovers">Top Movers</button>
+      <button class="menu-item" data-action="resetWatchlist"> Reset Default</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4> Tools</h4>
+      <button class="menu-item" data-action="fullscreen"> Fullscreen</button>
+      <button class="menu-item" data-action="share"> Share Dashboard</button>
+      <button class="menu-item" data-action="feedback"> Feedback</button>
+    </div>
+    
+    <div class="menu-section">
+      <h4> Info</h4>
+      <button class="menu-item" data-action="shortcuts">⌨ Shortcuts</button>
+      <button class="menu-item" data-action="about"> About</button>
+    </div>
+  </div>
+  
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="container">
+    <h1 class="fade">Stock Market Dashboard</h1>
+    <p class="fade">Professional real-time stock tracking and analysis platform for investors and traders. Access live market data, advanced charting tools, and comprehensive stock analysis to make informed investment decisions.</p>
+    <p class="fade">Get started with our powerful dashboard featuring real-time charts, stock search, market indicators, and customizable watchlists. Perfect for both beginners and experienced traders.</p>
+    
+    <div class="fade" style="text-align: center; margin: 40px 0;">
+      <a href="stocks.html" class="btn" style="display: inline-block; padding: 15px 30px; background: #4db8ff; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1em; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4); margin-right: 15px;">Launch Dashboard</a>
+      <a href="will-apple-stock-go-up.html" class="btn" style="display: inline-block; padding: 15px 30px; background: #555; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1em; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(85, 85, 85, 0.4);">View Analysis</a>
+    </div>
+    
+    <h2 class="fade">Key Features</h2>
+    <div class="fade" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+      <div style="background-color: #2a2a2a; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+        <h3 style="color: #4db8ff; margin-top: 0;">📈 Real-time Charts</h3>
+        <p>Interactive TradingView charts with technical indicators and drawing tools for comprehensive market analysis.</p>
+      </div>
+      <div style="background-color: #2a2a2a; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+        <h3 style="color: #4db8ff; margin-top: 0;">🔍 Advanced Search</h3>
+        <p>Intelligent stock symbol and company name search with autocomplete suggestions and market categorization.</p>
+      </div>
+      <div style="background-color: #2a2a2a; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+        <h3 style="color: #4db8ff; margin-top: 0;">📱 Mobile Ready</h3>
+        <p>Fully responsive design optimized for desktop, tablet, and mobile devices with touch-friendly controls.</p>
+      </div>
+      <div style="background-color: #2a2a2a; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+        <h3 style="color: #4db8ff; margin-top: 0;">🌓 Dark/Light Theme</h3>
+        <p>Switch between elegant dark and light themes for comfortable viewing in any lighting condition.</p>
+      </div>
+    </div>
+
+    <div class="fade" style="background-color: #2a2a2a; padding: 25px; border-radius: 10px; border: 1px solid #4db8ff; margin: 30px 0; text-align: center;">
+      <h3 style="color: #4db8ff; margin-top: 0;">🚀 Auto-Launch in <span id="countdown">5</span> seconds</h3>
+      <p style="margin-bottom: 15px;">You will be automatically redirected to the dashboard, or click below to navigate manually.</p>
+      <button onclick="cancelRedirect()" style="background: #ff4444; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 10px;">Cancel Auto-Launch</button>
+      <button onclick="goToDashboard()" style="background: #4db8ff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Go Now</button>
+    </div>
+
+    <footer class="fade">
+      <p>© 2025 Harshil | Professional Stock Market Analysis Tools</p>
+    </footer>
   </div>
 
   <script>
-    setTimeout(() => {
-      window.location.href = 'stocks.html';
-    }, 5000);
+    let redirectTimer;
+    let countdownTimer;
+    let secondsLeft = 5;
 
-    gtag('event', 'page_view', {
-      page_title: 'Stock Dashboard Homepage',
-      page_location: window.location.href
+    function updateCountdown() {
+      const countdownElement = document.getElementById('countdown');
+      if (countdownElement) {
+        countdownElement.textContent = secondsLeft;
+      }
+      
+      if (secondsLeft <= 0) {
+        window.location.href = 'stocks.html';
+        return;
+      }
+      
+      secondsLeft--;
+    }
+
+    function startRedirectTimer() {
+      updateCountdown();
+      countdownTimer = setInterval(updateCountdown, 1000);
+    }
+
+    function cancelRedirect() {
+      if (countdownTimer) {
+        clearInterval(countdownTimer);
+      }
+      const countdownElement = document.getElementById('countdown');
+      if (countdownElement) {
+        countdownElement.parentElement.innerHTML = '<h3 style="color: #4db8ff; margin-top: 0;">✅ Auto-Launch Cancelled</h3><p>Navigate manually using the buttons above.</p>';
+      }
+    }
+
+    function goToDashboard() {
+      window.location.href = 'stocks.html';
+    }
+
+    // Start the countdown when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      startRedirectTimer();
+      
+      // Track page view
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Stock Dashboard Homepage',
+          page_location: window.location.href
+        });
+      }
     });
   </script>
 </body>
