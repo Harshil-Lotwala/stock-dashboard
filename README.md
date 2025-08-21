@@ -1,8 +1,21 @@
 #  Stock Dashboard
 
+ **[LIVE DEMO](https://stock-dashboard7781.netlify.app)** 
+
 A modern, responsive stock market dashboard featuring real-time stock data, interactive charts, weather integration, and comprehensive market analysis tools.
 
 Created by Harshil Lotwala
+
+## 🌐 Live Deployment
+
+**Live Site**: [https://stock-dashboard7781.netlify.app](https://stock-dashboard7781.netlify.app)
+
+- ✅ **Hosted on Netlify** with automatic deployments
+- ✅ **Real-time Stock Data** via Finnhub API
+- ✅ **Live Weather Integration** via WeatherAPI.com
+- ✅ **Professional TradingView Charts**
+- ✅ **Mobile Responsive Design**
+- ✅ **Dark/Light Theme Toggle**
 
 
 ##  Features
