@@ -1,0 +1,3 @@
+[build]
+  command = ""     # no build step
+  publish = "."    # deploy this folder (where index.html is)
