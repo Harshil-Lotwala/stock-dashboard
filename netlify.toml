@@ -1,3 +1,6 @@
 [build]
   command = ""     # no build step
-  publish = "."    # deploy this folder (where index.html is)
+  publish = "."    # deploy from repo root
+
+[build.environment]
+  NODE_VERSION = "20"
